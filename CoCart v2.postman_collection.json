@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "703701a8-57e0-472a-8595-96d3c208c0f3",
+		"name": "CoCart v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Localhost",
+			"item": [
+				{
+					"name": "Get Cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/get-cart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"get-cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Specific Cart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/get-cart/?id=hellothere",
+									"protocol": "http",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cocart",
+										"wordpress",
+										"wp-json",
+										"cocart",
+										"{{api_version}}",
+										"get-cart",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "hellothere"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get Cart with Thumbnail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/get-cart?thumb=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"get-cart"
+							],
+							"query": [
+								{
+									"key": "thumb",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/add-item?product_id=32",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"add-item"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "32"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Item and Return Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/add-item?product_id=32&return_cart=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"add-item"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "32"
+								},
+								{
+									"key": "return_cart",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Item and Set Quantity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/add-item?product_id=32&quantity=4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"add-item"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "32"
+								},
+								{
+									"key": "quantity",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate Totals",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/calculate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"calculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate Totals and Return Totals",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/calculate?return=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"calculate"
+							],
+							"query": [
+								{
+									"key": "return",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/count-items",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"count-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Totals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/totals",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"totals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Totals Pre-formatted",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/totals?html=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"totals"
+							],
+							"query": [
+								{
+									"key": "html",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/clear",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Item from Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/item?cart_item_key=6364d3f0f495b6ab9dcf8d3b5c6e0b01",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"item"
+							],
+							"query": [
+								{
+									"key": "cart_item_key",
+									"value": "6364d3f0f495b6ab9dcf8d3b5c6e0b01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Item to Cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/item?cart_item_key=6364d3f0f495b6ab9dcf8d3b5c6e0b01",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"item"
+							],
+							"query": [
+								{
+									"key": "cart_item_key",
+									"value": "6364d3f0f495b6ab9dcf8d3b5c6e0b01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item and set quantity to zero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/item?cart_item_key=6364d3f0f495b6ab9dcf8d3b5c6e0b01&quantity=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"item"
+							],
+							"query": [
+								{
+									"key": "cart_item_key",
+									"value": "6364d3f0f495b6ab9dcf8d3b5c6e0b01"
+								},
+								{
+									"key": "quantity",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cart in Session",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/get-cart/997c192c52231c0b36f06ab15d395d66",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"get-cart",
+								"997c192c52231c0b36f06ab15d395d66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Item (Name Your Price) and Return Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 129,\n\t\"cart_item_data\": {\n\t\t\"nyp\": \"24\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/add-item?return_cart=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"add-item"
+							],
+							"query": [
+								{
+									"key": "return_cart",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Variable Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 281,\r\n    \"quantity\": 1,\r\n    \"variation_id\": 285\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/add-item",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"add-item"
+							],
+							"query": [
+								{
+									"key": "variation",
+									"value": "{test:test}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp-json/cocart/{{api_version}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp-json",
+								"cocart",
+								"{{api_version}}",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e4f0072b-c8e3-4654-b31a-ad1e5b7c679c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f8152c52-440a-47ba-a89b-4e0e3d913050",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
